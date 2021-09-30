@@ -27,7 +27,7 @@ export default function Layout({children, frontMatter}) {
         <Navbar>
           <Navbar.Brand>
             <Link href="/" passHref><NavbarItem>
-              <Image src={logoSvg} alt='Termux logo' width='20px' height="24px" />
+              <Image src={logoSvg} alt='Termux logo' width='28px' height="18px" />
               <span className='pl-2'>Termux Wiki</span>
             </NavbarItem></Link>
             <Navbar.Burger onClick={() => {setisActive(!isActive)}} className={isActive ? 'is-active' : ''} />
