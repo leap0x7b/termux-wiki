@@ -252,7 +252,7 @@ You need to archive contents of these directories:
 You can use utility `tar`. Before uninstalling the app, ensure that
 archives are placed to safe location such as `/sdcard`.
 
-## Repositories are down and return 403 404 errors
+## Repositories are down and return 403 or 404 errors
 
 Switch to a working repository with `termux-change-repo`. You will
 need to select repositories which do not work, if unsure what to select.

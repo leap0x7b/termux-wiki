@@ -1,26 +1,33 @@
 import React from 'react'
 import { Container, Navbar, Content } from 'react-bulma-components'
+import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import logo from '../pages/termux.png'
+import logoSvg from '../pages/termux.svg'
 
 export default function Layout({children, frontMatter}) {
   const {pathname} = useRouter()
   const [isActive, setisActive] = React.useState(false)
   const NavbarItem = React.forwardRef((props, ref) => {
     return (
-      <Navbar.Item {...props} domRef={ref }/>
+      <Navbar.Item {...props} domRef={ref}/>
     )
   })
 
   return (
     <Container>
+      <Head>
+        <link rel="icon" href={logo.src} />
+        <link rel="favicon" href={logo.src} />
+        <title>{frontMatter.title} | Termux Wiki</title>
+      </Head>
       <Container>
         <Navbar>
           <Navbar.Brand>
             <Link href="/" passHref><NavbarItem>
-              <Image src={logo} alt='Termux logo' width="24px" height="24px" />
+              <Image src={logoSvg} alt='Termux logo' width='20px' height="24px" />
               <span className='pl-2'>Termux Wiki</span>
             </NavbarItem></Link>
             <Navbar.Burger onClick={() => {setisActive(!isActive)}} className={isActive ? 'is-active' : ''} />

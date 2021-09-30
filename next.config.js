@@ -10,6 +10,7 @@ const withMDX = require('@next/mdx')({
         repository: "https://github.com/termux/termux-app"
       }],
       require('remark-slug'),
+      require('remark-attr'),
       require('./lib/frontmatter.js')
     ],
     rehypePlugins: []
