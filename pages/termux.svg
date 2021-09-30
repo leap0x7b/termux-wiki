@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="vector" viewBox="34 38 40 32">
-    <path id="path" d="M 34 38 L 40 38 L 52 54 L 40 70 L 34 70 L 46 54" fill="currentColor"></path>
-    <path id="path_1" d="M 56 66 L 74 66 L 74 70 L 56 70" fill="currentColor"></path>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="34 38 40 32"><path d="M34 38h6l12 16-12 16h-6l12-16M56 66h18v4H56" fill="currentColor"/></svg>
