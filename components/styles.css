@@ -1,0 +1,23 @@
+.header-anchor {
+  font-size: 0.625em;
+  display: none;
+}
+
+h2:hover .header-anchor {
+  display: inline-block;
+}
+
+/* Fix Prism syntax highlighting on Bulma */
+.content .tag, .content .number, .token.tag, .token.number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
