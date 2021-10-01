@@ -60,15 +60,15 @@ libc.so, libm.so, libdl.so from /system/lib or /system/lib64).
 Use of the libc provided by Android and FHS incompatibility make it
 impossible to execute native packages copied from Linux distributions:
 
--   Dynamically linked programs will not run because the linker is
-    expected in a nonexistent location (/lib) and libc ABI does not
-    match.
--   Statically linked programs (only networking ones) will not be able
-    to resolve DNS names. GNU libc normally doesn't allow static linking
-    with resolver. Also, the file /etc/resolv.conf does not exist on
-    Android.
--   On non-rooted Android 8 or newer, statically linked programs will
-    not run due to issues with seccomp filter.
+- Dynamically linked programs will not run because the linker is
+  expected in a nonexistent location (/lib) and libc ABI does not
+  match.
+- Statically linked programs (only networking ones) will not be able
+  to resolve DNS names. GNU libc normally doesn't allow static linking
+  with resolver. Also, the file /etc/resolv.conf does not exist on
+  Android.
+- On non-rooted Android 8 or newer, statically linked programs will
+  not run due to issues with seccomp filter.
 
 However, these restrictions can be bypassed by setting up a Linux
 distribution rootfs with [PRoot](proot).

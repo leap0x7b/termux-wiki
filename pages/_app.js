@@ -12,14 +12,10 @@ import Highlight, { defaultProps} from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/github'
 
 const Code = ({ children, className }) => {
-  if (className.replace(/language-/, '') !== undefined) {
-    const language = className.replace(/language-/, '')
-  } else {
-    const language = 'none'
-  }
+  const language = className.replace(/language-/, '')
 
   return (
-    <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
+    <Highlight {...defaultProps} code={children.trim()} language={language !== undefined ? language : 'none'} theme={theme}>
       {({className, style, tokens, getLineProps, getTokenProps}) => (
         <pre className={{className}, 'highlight'} style={{...style, padding: '20px'}}>
           {tokens.map((line, i) => (
