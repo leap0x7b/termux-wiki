@@ -5,19 +5,30 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import logo from '../pages/termux.png'
+import logoSvg from '../pages/termux.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 
 export default function Layout({children, frontMatter}) {
-  const {pathname} = useRouter()
+  const {asPath, pathname} = useRouter()
   const [isActive, setisActive] = React.useState(false)
   const NavbarItem = React.forwardRef(function navitem(props, ref) {return <Navbar.Item {...props} domRef={ref}/>})
 
   return (
     <Container>
       <Head>
-        <link rel="icon" href={logo.src} />
-        <link rel="favicon" href={logo.src} />
+        <meta property='og:site_name' content='Termux Wiki' />
+        <meta property='og:title' content={frontMatter.title} />
+        <meta property='og:description' content={children[0].props.children} />
+        <meta property='og:url' content={'https://termux-wiki.vercel.app' + asPath} />
+        <meta name='twitter:site' content='@termux' />
+        <meta name='twitter:title' content={frontMatter.title} />
+        <meta name='twitter:description' content={children[0].props.children} />
+        <meta name='description' content={children[0].props.children} />
+        <link rel='canonical' href={'https://termux-wiki.vercel.app' + asPath} />
+        <link rel='icon' href={logo.src} />
+        <link rel='favicon' href={logo.src} />
+        <link rel='mask-icon' href={logoSvg.src} color='#000000' />
         <title>{frontMatter.title} | Termux Wiki</title>
       </Head>
       <Container>
@@ -40,7 +51,7 @@ export default function Layout({children, frontMatter}) {
         </Navbar>
       </Container>
       <Container className="px-4 pt-4 pb-4">
-        <h1 className="title">{frontMatter.title} <a href={pathname} className='header-anchor'><FontAwesomeIcon icon={faLink} /></a></h1>
+        <h1 className="title">{frontMatter.title} <a href={asPath} className='header-anchor'><FontAwesomeIcon icon={faLink} /></a></h1>
       </Container>
       <hr style={{margin: '0px'}}/>
       <Content className="px-4 pt-4 pb-5">
