@@ -19,12 +19,12 @@ export default function Layout({children, frontMatter}) {
       <Head>
         <meta property='og:site_name' content='Termux Wiki' />
         <meta property='og:title' content={frontMatter.title} />
-        <meta property='og:description' content={children[0].props.children} />
+        <meta property='og:description' content={children[0] !== undefined ? children[0].props.children : children.props.children} />
         <meta property='og:url' content={'https://termux-wiki.vercel.app' + asPath} />
         <meta name='twitter:site' content='@termux' />
         <meta name='twitter:title' content={frontMatter.title} />
-        <meta name='twitter:description' content={children[0].props.children} />
-        <meta name='description' content={children[0].props.children} />
+        <meta name='twitter:description' content={children[0] !== undefined ? children[0].props.children : children.props.children} />
+        <meta name='description' content={children[0] !== undefined ? children[0].props.children : children.props.children} />
         <link rel='canonical' href={'https://termux-wiki.vercel.app' + asPath} />
         <link rel='icon' href={logo.src} />
         <link rel='favicon' href={logo.src} />
