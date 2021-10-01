@@ -50,7 +50,7 @@ const mdComponents = {
   wrapper: Layout,
   pre: props => <div className='block' {...props} />,
   code: Code,
-  a: Link,
+  a: props => <Link {...props} passHref />,
   table: props => (
     <div className='table-container'>
       <table className='table is-striped' {...props} />

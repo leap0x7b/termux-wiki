@@ -18,7 +18,7 @@ How to install Termux app from F-Droid:
 Please do not mix your installation of Termux between Google Play and
 F-Droid. There are compatibility issues such as, "[Can't install
 Termux:Api from google play on Nougat
-\#53](https://github.com/termux/termux-api/issues/53)".
+#53](https://github.com/termux/termux-api/issues/53)".
 
 ## See Also
 
