@@ -11,9 +11,11 @@ hierarchy, or executing programs built for another CPU architecture
 transparently through QEMU user-mode.
 
 You can install PRoot with this command:
+
 ```shell
 $ pkg install proot
 ```
+
 Termux maintains its own version of PRoot, which is compatible with the
 latest Android OS versions. You can find its source code at
 https://github.com/termux/proot.
@@ -44,24 +46,26 @@ used from Termux of course.
 The main purpose of PRoot is to run the Linux distributions inside
 Termux without having to root device. Simplest way to start a shell in a
 distribution chroot is:
+
 ```shell
 $ unset LD_PRELOAD
 $ proot -r ./rootfs -0 -w / -b /dev -b /proc -b /sys /bin/sh
 ```
+
 Where:
 
--   `unset LD_PRELOAD` - Termux-exec, execve() hook, conflicts with
-    PRoot.
--   `-r ./rootfs` - option to specify the rootfs where Linux
-    distribution was installed.
--   `-0` - tells PRoot to simulate a root user which expected to be
-    always available in Linux distributions. This option will allow you
-    to use package manager.
--   `-b /dev -b /proc -b /sys` - make file systems at /dev, /proc, /sys
-    appear in the rootfs. These 3 bindings are important and used by
-    variety of utilities.
--   `/bin/sh` - a program that should be executed inside the rootfs.
-    Typically a shell.
+- `unset LD_PRELOAD` - Termux-exec, execve() hook, conflicts with
+  PRoot.
+- `-r ./rootfs` - option to specify the rootfs where Linux
+  distribution was installed.
+- `-0` - tells PRoot to simulate a root user which expected to be
+  always available in Linux distributions. This option will allow you
+  to use package manager.
+- `-b /dev -b /proc -b /sys` - make file systems at /dev, /proc, /sys
+  appear in the rootfs. These 3 bindings are important and used by
+  variety of utilities.
+- `/bin/sh` - a program that should be executed inside the rootfs.
+  Typically a shell.
 
 You can learn more about options supported by PRoot by executing
 `proot --help`.
@@ -72,9 +76,11 @@ Termux provides a package
 [proot-distro](https://github.com/termux/proot-distro) which takes care
 of management of the Linux distributions inside Termux. You can install
 this utility by executing
+
 ```shell
 $ pkg install proot-distro
 ```
+
 For now it supports these distributions:
 
 - Alpine Linux (3.14.x)
@@ -89,18 +95,22 @@ For now it supports these distributions:
 
 To install distribution, just run this command (assuming proot-distro is
 installed):
+
 ```shell
 $ proot-distro install <alias>
 ```
+
 where "\<alias\>" should be replaced by chosen distribution, e.g.
 "alpine". Note that it is expected that you have a stable Internet
 connection during installation, otherwise download may fail.
 
 After installation, you can start a shell session by executing next
 command:
+
 ```shell
 proot-distro login <alias>
 ```
+
 Here is a basic overview of the available proot-distro functionality:
 
 |                        |                                                    |
@@ -118,6 +128,7 @@ detailed explanation about available functions you can find at project
 page: <https://github.com/termux/proot-distro#functionality-overview>
 
 Example of installing Debian and launching shell:
+
 ```shell
 proot-distro install debian
 proot-distro login debian

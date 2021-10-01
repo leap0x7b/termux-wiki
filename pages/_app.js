@@ -1,6 +1,7 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import 'bulma/bulma.sass'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import '../components/styles.css'
 import Link from 'next/link'
 import { Image } from 'react-bulma-components'
@@ -10,8 +11,12 @@ import Layout from '../components/Layout.js'
 import Highlight, { defaultProps} from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/github'
 
-const  Code = ({ children, className }) => {
-  const language = className.replace(/language-/, '')
+const Code = ({ children, className }) => {
+  if (className.replace(/language-/, '') !== undefined) {
+    const language = className.replace(/language-/, '')
+  } else {
+    const language = 'none'
+  }
 
   return (
     <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
@@ -70,10 +75,12 @@ const mdComponents = {
   }
 }
 
-export default function App({Component, pageProps}) {
+function App({Component, pageProps}) {
   return (
     <MDXProvider components={mdComponents}>
       <Component {...pageProps} />
     </MDXProvider>
   )
 }
+
+export default App

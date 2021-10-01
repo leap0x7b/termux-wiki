@@ -37,22 +37,28 @@ It is a wrapper that performs a number of tasks:
 
   
 Installing a new package:
+
 ```shell
 $ pkg install package-name
 ```
+
 It is highly recommended to upgrade existing packages before installing
 the new one. You can install updates by running this command:
+
 ```shell
 $ pkg upgrade
 ```
+
 Additionally, we suggesting to check for updates at least once a week.
 Otherwise there is a certain risk that during package installation or
 upgrade you will encounter issues.
 
 Removing the installed package:
+
 ```shell
 $ pkg uninstall package-name
 ```
+
 This will remove package but modified configuration files will be left
 intact. If you want to remove them, use `apt purge` instead.
 
@@ -123,10 +129,12 @@ Repository of this community member includes **gcc**, **gfortran**,
 **octave**, **r-cran** (R language), **scipy** and lots of games!
 
 To add this repository, execute:
+
 ```shell
 $ curl -LO https://its-pointless.github.io/setup-pointless-repo.sh | bash
 $ apt update
 ```
+
 The script essentially installs gnupg on your device, downloads and adds
 a public key to your apt keychain ensuring that all subsequent downloads
 are from the same source.
@@ -155,7 +163,7 @@ cross-compiling them in our build environment.
 - [Ruby Package Management (gem)](ruby)
 - [TeX Live Package Management (tlmgr)](tex-live)
 - [Rust Package Manager
-  (Cargo)](development-environments#Rust)
+  (Cargo)](development-environments#rust)
 
 ## See Also
 

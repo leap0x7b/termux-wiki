@@ -28,9 +28,11 @@ you don't know which dotfile is broken read the section about about
 possible broken dotfiles below. It's most likely the one you tinkered
 with the last. Once you have identified the broken dotfile, move it to a
 new name. Example:
+
 ```shell
 $ mv .profile .profile.bak
 ```
+
 Now you can try to launch a normal session again. If it still doesn't
 work, you'll have to check the other dotfiles again. Otherwise, since
 you now have access to your Termux programs again, you can edit the file
@@ -56,6 +58,7 @@ If you used `chsh` to set your default shell to something that doesn't
 work as a shell your environment will also be broken. In this case use
 the Failsafe Session to remove `~/.termux/shell` and launch a new normal
 session.
+
 ```shell
 $ rm -rf /data/data/com.termux/files/home/.termux/shell
 ```
@@ -67,9 +70,11 @@ If the problem isn't with your dotfiles, you may have a broken
 broken update, something crashed at the wrong time or you messed around
 int `$PREFIX` yourself. In this case, the best option is to use the
 nuclear option. Remove `$PREFIX` entirely.
+
 ```shell
 $ rm -rf /data/data/com.termux/files/usr
 ```
+
 After that you can restart your Termux App completely, which will
 trigger a reinstallation of the default `$PREFIX` contents. You'll have
 to reinstall all your programs, but your `$HOME` folder remains

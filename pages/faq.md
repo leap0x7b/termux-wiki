@@ -202,7 +202,6 @@ There 2 ways to get a fake root:
   Of course, using the real root in this case is overkill.
 - Package `proot` - run a rootless Linux distribution "chroot".
 
-  
 Fake root will not help you to root your device. Neither will help you
 to run a software requiring superuser privileges.
 
@@ -246,8 +245,8 @@ available.
 
 You need to archive contents of these directories:
 
-`/data/data/com.termux/files/usr`
-`/data/data/com.termux/files/home`
+- /data/data/com.termux/files/usr
+- /data/data/com.termux/files/home
 
 You can use utility `tar`. Before uninstalling the app, ensure that
 archives are placed to safe location such as `/sdcard`.
@@ -273,11 +272,13 @@ information on Termux recovery topic.
 
 You need to grant a *Storage access permission* to application. We
 recommend to do that through command
+
 ```shell
 $ termux-setup-storage
 ```
+
 It will ask for permission and once it was granted, it will setup a
-symlinks in directory \~/storage to standard directories like DCIM,
+symlinks in directory ~/storage to standard directories like DCIM,
 Download, etc.
 
 Storage (shared) is usually accessible through:
@@ -309,28 +310,36 @@ features like auto-correction or prediction.
 
 In order to solve issue you need to use either a different keyboard or
 run these commands:
+
 ```shell
 $ mkdir -p ~/.termux
 $ echo "enforce-char-based-input = true" >> ~/.termux/termux.properties
 ```
+
 Restart application after making changes to "termux.properties" file.
 
 ## How do I get help for a specific package
 
 Usually you can use next commands to get a brief usage of the utility:
+
 ```shell
 $ packagename -h
 $ packagename --help
 ```
+
 More advanced information can be viewed by using a `man` tool. It can be
 [installed](package-management) by
+
 ```shell
 $ pkg install man
 ```
+
 Here is an example how to view information for utility `ls`:
+
 ```shell
 $ man ls
 ```
+
 Tips, when reading a man page:
 
 - Use q to quit
@@ -338,7 +347,6 @@ Tips, when reading a man page:
 - /search for search
 - n for repeat search
 
-  
 Sometimes utility name may not match the package name. If you
 encountered a such package, consult its online home page to get a brief
 introduction or use utility `whatprovides` to list the available files
@@ -355,11 +363,13 @@ handled by Android linker.
 
 To make this warning disappear you need to use utility
 "termux-elf-cleaner" binary file and probably on all its dependencies.
+
 ```shell
 $ pkg install termux-elf-cleaner
 $ termux-elf-cleaner ./myprogram
 $ termux-elf-cleaner ./libmysharedlibrary.so
 ```
+
 Number of supported ELF sections increases with each Android OS version.
 On Android &gt;7.0 you may not get such warnings.
 

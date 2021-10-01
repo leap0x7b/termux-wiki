@@ -17,13 +17,17 @@ resulting archive will be stored on your shared storage (`/sdcard`) and
 compressed with `gzip`.
 
 1. Ensure that storage permission is granted:
+
 ```shell
 $ termux-setup-storage
 ```
+
 2. Backing up files:
+
 ```shell
 $ tar -zcf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./usr
 ```
+
 Backup should be finished without any error. There shouldn't be any
 permission denials unless the user abused root permissions. If you got
 some warnings about socket files, ignore them.
@@ -48,16 +52,20 @@ into same archive. Please note that all files would be overwritten
 during the process.
 
 1. Ensure that storage permission is granted:
+
 ```shell
 $ termux-setup-storage
 ```
+
 2. Extract home and usr with overwriting everything. Pass
 `--recursive-unlink` to remove any junk and orphaned files. Pass
 `--preserve-permissions` to set file permissions as in archive, ignoring
 the umask value. By combining these extra options you will get
 installation state exactly as was in archive.
+
 ```shell
 $ tar -zxf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 ```
+
 Now close Termux with the "exit" button from notification and open it
 again.

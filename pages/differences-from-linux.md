@@ -32,12 +32,14 @@ attribute is used instead of LD\_LIBRARY\_PATH.
 
 If you still need a classical Linux file system layout for some reason,
 you may try to use **termux-chroot** from package 'proot':
+
 ```shell
 $ pkg install proot
 $ termux-chroot
 $ ls /usr
 bin  doc  etc  include lib  libexec  share  tmp  var
 ```
+
 The **termux-chroot** utility may be very helpful if you use custom
 software that requires standard paths like /tmp, /etc, /usr to be
 available.
@@ -68,7 +70,6 @@ impossible to execute native packages copied from Linux distributions:
 -   On non-rooted Android 8 or newer, statically linked programs will
     not run due to issues with seccomp filter.
 
-  
 However, these restrictions can be bypassed by setting up a Linux
 distribution rootfs with [PRoot](proot).
 
@@ -106,7 +107,7 @@ accidentally deleting or overwriting files in $PREFIX.
 
 ## See Also
 
--   [Running Linux operating systems in Termux PRoot](proot)
--   [Sharing data between Termux and other
-    applications](sharing-data)
--   [Termux-exec](termux-exec)
+- [Running Linux operating systems in Termux with PRoot](proot)
+- [Sharing data between Termux and other
+  applications](sharing-data)
+- [Termux-exec](termux-exec)

@@ -52,7 +52,7 @@ export default function Layout({children, frontMatter}) {
         </Navbar>
       </Container>
       <Container className="px-4 pt-4 pb-4">
-        <h1 className="title">{frontMatter.title} <a href={asPath} className='header-anchor'><FontAwesomeIcon icon={faLink} /></a></h1>
+        <h1 className="title">{frontMatter.title} <a href={pathname} className='header-anchor'><FontAwesomeIcon icon={faLink} /></a></h1>
       </Container>
       <hr style={{margin: '0px'}}/>
       <Content className="px-4 pt-4 pb-5">
