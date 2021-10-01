@@ -28,6 +28,7 @@ export default function Layout({children, frontMatter}) {
         <link rel='canonical' href={'https://termux-wiki.vercel.app' + asPath} />
         <link rel='icon' href={logo.src} />
         <link rel='favicon' href={logo.src} />
+        <link rel='shortcut icon' href={logo.src} />
         <link rel='mask-icon' href={logoSvg.src} color='#000000' />
         <title>{frontMatter.title} | Termux Wiki</title>
       </Head>
