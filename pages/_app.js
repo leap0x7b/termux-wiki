@@ -30,7 +30,7 @@ const  Code = ({ children, className }) => {
   )
 }
 
-const heading = (Tag) => (props) => {
+const heading = (Tag) => function head(props) {
   if (!props.id) return <Tag {...props} />
 
   return (

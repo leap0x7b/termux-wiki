@@ -11,11 +11,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons'
 export default function Layout({children, frontMatter}) {
   const {pathname} = useRouter()
   const [isActive, setisActive] = React.useState(false)
-  const NavbarItem = React.forwardRef((props, ref) => {
-    return (
-      <Navbar.Item {...props} domRef={ref}/>
-    )
-  })
+  const NavbarItem = React.forwardRef(function navitem(props, ref) {return <Navbar.Item {...props} domRef={ref}/>})
 
   return (
     <Container>
