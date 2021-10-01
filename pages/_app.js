@@ -51,7 +51,11 @@ const mdComponents = {
   pre: props => <div className='block' {...props} />,
   code: Code,
   a: Link,
-  table: props => <div className='table-container'><table className='table is-striped' {...props} /></div>,
+  table: props => (
+    <div className='table-container'>
+      <table className='table is-striped' {...props} />
+    </div>
+  ),
   img: props => {
     if (props.title !== undefined) {
       return (
