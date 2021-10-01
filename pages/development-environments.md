@@ -65,6 +65,15 @@ programming environments.
 - Homepage: https://nodejs.org
 - Related Issues: https://github.com/termux/termux-packages/issues?q=nodejs
 
+## Julia
+
+- Package: Julia is available from a community repository. Setup up
+  [its-pointless'](package-management#by-its-pointless)
+  repository.
+- Homepage: https://julialang.org
+- Related Issues:
+  https://github.com/its-pointless/its-pointless.github.io/issues?q=julia
+
 ## Lisp
 
 ### ECL
@@ -90,7 +99,8 @@ programming environments.
   repository.
 - Homepage: https://ocaml.org
 - Instructions: https://ocaml.org/learn/description.html
-- Related Issues: https://github.com/termux/termux-packages/issues?q=ocaml
+- Related Issues:
+  https://github.com/its-pointless/its-pointless.github.io/issues?q=ocaml
 
 ## Octave
 
