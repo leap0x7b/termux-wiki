@@ -38,40 +38,40 @@ const Layout = ({ children, frontMatter }) => {
 
   return (
     <>
-      <Container>
-        <Head>
-          <meta property="og:site_name" content="Termux Wiki" />
-          <meta property="og:title" content={frontMatter.title} />
-          <meta
-            property="og:description"
-            content={
-              children[0] !== undefined ? children[0].props.children : children.props.children
-            }
-          />
-          <meta property="og:url" content={'https://termux-wiki.vercel.app' + asPath} />
-          <meta name="twitter:site" content="@termux" />
-          <meta name="twitter:title" content={frontMatter.title} />
-          <meta
-            name="twitter:description"
-            content={
-              children[0] !== undefined ? children[0].props.children : children.props.children
-            }
-          />
-          <meta
-            name="description"
-            content={
-              children[0] !== undefined ? children[0].props.children : children.props.children
-            }
-          />
-          <link rel="canonical" href={'https://termux-wiki.vercel.app' + asPath} />
-          <link rel="icon" href={logo.src} />
-          <link rel="favicon" href={logo.src} />
-          <link rel="shortcut icon" href={logo.src} />
-          <link rel="mask-icon" href={logoSvg.src} color="#000000" />
-          <title>{frontMatter.title} | Termux Wiki</title>
-        </Head>
+      <Head>
+        <meta property="og:site_name" content="Termux Wiki" />
+        <meta property="og:title" content={frontMatter.title} />
+        <meta
+          property="og:description"
+          content={
+            children[0] !== undefined ? children[0].props.children : children.props.children
+          }
+        />
+        <meta property="og:url" content={'https://termux-wiki.vercel.app' + asPath} />
+        <meta name="twitter:site" content="@termux" />
+        <meta name="twitter:title" content={frontMatter.title} />
+        <meta
+          name="twitter:description"
+          content={
+            children[0] !== undefined ? children[0].props.children : children.props.children
+          }
+        />
+        <meta
+          name="description"
+          content={
+            children[0] !== undefined ? children[0].props.children : children.props.children
+          }
+        />
+        <link rel="canonical" href={'https://termux-wiki.vercel.app' + asPath} />
+        <link rel="icon" href={logo.src} />
+        <link rel="favicon" href={logo.src} />
+        <link rel="shortcut icon" href={logo.src} />
+        <link rel="mask-icon" href={logoSvg.src} color="#000000" />
+        <title>{frontMatter.title} | Termux Wiki</title>
+      </Head>
+      <Container className="has-navbar-fixed-top">
         <Container>
-          <Navbar style={{ position: 'fixed', top: 0, heigth: '4rem', width: '100%' }}>
+          <Navbar className="is-fixed-top">
             <Navbar.Brand>
               <Link href="/" passHref>
                 <NavbarItem>
@@ -93,7 +93,7 @@ const Layout = ({ children, frontMatter }) => {
                 className={isActive && 'is-active'}
               />
             </Navbar.Brand>
-            <Navbar.Menu className={isActive ? 'is-active' : ''}>
+            <Navbar.Menu className={isActive && 'is-active'}>
               {links.map((link, index) => {
                 return (
                   <Link href={link.url} key={index} passHref>
