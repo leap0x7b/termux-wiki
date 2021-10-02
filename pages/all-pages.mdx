@@ -6,13 +6,13 @@ import Link from 'next/link'
 
 export const importAll = (r) => {
   return r.keys().map((fileName) => ({
-    link: fileName.substr(1) === '/index.md' ? '/' : fileName.substr(1).replace(/\.md$/, ""),
+    link: fileName.substr(1) === '/index.mdx' ? '/' : fileName.substr(1).replace(/\.mdx$/, ""),
     module: r(fileName)
   }));
 }
 
 export const posts = importAll(
-  require.context(__dirname + "/", true, /\.md$/)
+  require.context(__dirname + "/", true, /\.mdx$/)
 );
 
 <ul>

@@ -8,8 +8,8 @@ differences.
 
 ## Termux is not FHS compliant
 
-*This is why Termux does not use official Debian or Ubuntu packages for
-its environment.*
+_This is why Termux does not use official Debian or Ubuntu packages for
+its environment._
 
 Termux does not follow [Filesystem Hierarchy
 Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
@@ -26,9 +26,9 @@ package (termux-exec) which allows usage of standard she-bangs.
 
 Most packages have shared library dependencies which are installed to
 $PREFIX/lib. On devices before Android 7, Termux exports the special
-variable $LD\_LIBRARY\_PATH which tells the linker where to find shared
-library files. On Android 7 or higher, the DT\_RUNPATH ELF header
-attribute is used instead of LD\_LIBRARY\_PATH.
+variable $LD_LIBRARY_PATH which tells the linker where to find shared
+library files. On Android 7 or higher, the DT_RUNPATH ELF header
+attribute is used instead of LD_LIBRARY_PATH.
 
 If you still need a classical Linux file system layout for some reason,
 you may try to use **termux-chroot** from package 'proot':

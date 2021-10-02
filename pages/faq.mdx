@@ -167,7 +167,7 @@ Here are just few ideas for Termux usage:
 
 - Device automation with scripting and Termux Tasker add-on.
 - File transfer & synchronization via syncthing, rsync, rclone, etc.
-- [SSH](https://en.wikipedia.org/wiki/SSH_(Secure_Shell)) client
+- [SSH](<https://en.wikipedia.org/wiki/SSH_(Secure_Shell)>) client
   (dropbear, openssh).
 - Programming (clang, python, vim, etc).
 
@@ -270,7 +270,7 @@ information on Termux recovery topic.
 
 ## How can I access device storage with Termux
 
-You need to grant a *Storage access permission* to application. We
+You need to grant a _Storage access permission_ to application. We
 recommend to do that through command
 
 ```shell
@@ -297,7 +297,7 @@ then revoke permission from Android settings and grant again.
 
 ## How can I hide the extra keys
 
-Tap key combination *Volume Up + K*.
+Tap key combination _Volume Up + K_.
 
 Alternate approach is to open drawer via swiping rightwards from the
 left screen side and then long tap on "Keyboard" button.
@@ -357,8 +357,8 @@ including utilities and documentation.
 Warnings produced by dynamic linker about unused sections are safe. They
 just notify developer that ELF header of executable file has extra
 information which cannot be interpreted by current linker version. In
-case of DT\_FLAGS\_1=0x8, it warns about RTLD\_NODELETE ELF section.
-Besides DT\_FLAGS\_1=0x8, there more types of ELF sections which are not
+case of DT_FLAGS_1=0x8, it warns about RTLD_NODELETE ELF section.
+Besides DT_FLAGS_1=0x8, there more types of ELF sections which are not
 handled by Android linker.
 
 To make this warning disappear you need to use utility

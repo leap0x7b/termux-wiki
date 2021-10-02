@@ -13,7 +13,10 @@ h6:hover .header-anchor {
 }
 
 /* Fix Prism syntax highlighting on Bulma */
-.content .tag, .content .number, .token.tag, .token.number {
+.content .tag,
+.content .number,
+.token.tag,
+.token.number {
   display: inline;
   padding: inherit;
   font-size: inherit;

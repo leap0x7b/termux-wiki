@@ -4,7 +4,7 @@ title: PRoot
 
 PRoot is a user-space implementation of
 [chroot](https://en.m.wikipedia.org/wiki/Chroot), mount --bind, and
-binfmt\_misc. This means that users don't need any privileges or setup
+binfmt_misc. This means that users don't need any privileges or setup
 to do things like using an arbitrary directory as the new root
 filesystem, making files accessible somewhere else in the filesystem
 hierarchy, or executing programs built for another CPU architecture
@@ -114,7 +114,7 @@ proot-distro login <alias>
 Here is a basic overview of the available proot-distro functionality:
 
 |                        |                                                    |
-|------------------------|----------------------------------------------------|
+| ---------------------- | -------------------------------------------------- |
 | `proot-distro list`    | show the supported distributions and their status. |
 | `proot-distro install` | install a distribution.                            |
 | `proot-distro login`   | start a root shell for the distribution.           |
@@ -144,7 +144,7 @@ official Termux support.
 
 Here is the list of some community-provided scripts:
 
-- Alpine Linux 
+- Alpine Linux
   - https://github.com/Hax4us/TermuxAlpine
   - https://github.com/Yonle/alpine-proot
 - Arch Linux\

@@ -39,8 +39,7 @@ cannot be changed or moved to an SD-Card because:
 In addition to prefix, users can store files in the home directory (or
 "$HOME") available at `/data/data/com.termux/files/home`. However, the
 file system is not the only difference from the traditional Linux
-distributions. For more information, read [Differences from Linux](
-differences-from-linux).
+distributions. For more information, read [Differences from Linux](differences-from-linux).
 
 ## What can I do with Termux?
 
@@ -54,7 +53,6 @@ There are a number of common use-cases for the Termux application:
 - Running an SSH client.
 - Synchronizing and backing up your files.
 
-  
 Of course, usage is not limited to the topics listed above. There are
 more than 1000 packages in our repositories. If these packages don't
 have what you're looking for, you can compile your own - we have a
@@ -83,7 +81,6 @@ You may want to root your device to:
   proot!) or containerization.
 - Generally have "full" control over your device.
 
-  
 Otherwise root isn't necessary and is rather bad than good.
 
 ## Tips
@@ -134,8 +131,8 @@ These links may be useful for advanced users:
   built-in commands use,
 - https://debian-handbook.info/ The Debian Administrator's Handbook.
 
-*When following tutorial examples, remember that Termux is not a Linux
-distribution.* Some commands may not work, for example `ls /home`, due
+_When following tutorial examples, remember that Termux is not a Linux
+distribution._ Some commands may not work, for example `ls /home`, due
 to non-existent paths and other
 [differences](differences-from-linux) Linux and Android have
 regarding Termux distributions.
@@ -152,7 +149,6 @@ The best ways to contribute are:
 - Submitting package updates.
 - Submitting pull requests with bug fixes and improvements.
 
-  
 All of the source code for Termux can be found at
 https://github.com/termux.
 

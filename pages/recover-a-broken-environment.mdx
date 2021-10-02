@@ -13,8 +13,8 @@ Failsafe Session.
 1. Close all sessions of Termux application.
 
 2. Either long-press the termux launcher icon and then press "failsafe"
-(only works on recent android versions) or long-press the "new session"
-button in the left drawer inside the termux app.
+   (only works on recent android versions) or long-press the "new session"
+   button in the left drawer inside the termux app.
 
 You are now in a Failsafe Session. It launches the default Shell of
 Android `/system/bin/sh` with access to the Termux directory. Despite

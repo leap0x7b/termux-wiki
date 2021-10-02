@@ -32,10 +32,9 @@ It is a wrapper that performs a number of tasks:
 - Automatically runs `apt update` before installing a package if
   necessary.
 - Performs some client side repository load-balancing by automatically
-  switching mirrors on a regular basis. *That is important to prevent
-  us hitting quota limit on hosting.*
+  switching mirrors on a regular basis. _That is important to prevent
+  us hitting quota limit on hosting._
 
-  
 Installing a new package:
 
 ```shell
@@ -65,7 +64,7 @@ intact. If you want to remove them, use `apt purge` instead.
 See below for additional supported commands:
 
 | Command                   | Description                                |
-|---------------------------|--------------------------------------------|
+| ------------------------- | ------------------------------------------ |
 | `pkg autoclean`           | Remove outdated .deb files from the cache. |
 | `pkg clean`               | Remove all .deb files from the cache.      |
 | `pkg files <package>`     | List files installed by specified package. |
@@ -87,7 +86,7 @@ topic and can be enabled by installing packages with name ending in
 List of current optional repositories:
 
 | Repository                                                                         | Command to subscribe to repository |
-|------------------------------------------------------------------------------------|------------------------------------|
+| ---------------------------------------------------------------------------------- | ---------------------------------- |
 | [game-packages](https://github.com/termux/game-packages)                           | `pkg install game-repo`            |
 | [science-packages](https://github.com/termux/science-packages)                     | `pkg install science-repo`         |
 | [termux-root-packages](https://github.com/termux/termux-root-packages)             | `pkg install root-repo`            |

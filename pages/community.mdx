@@ -77,7 +77,7 @@ Publications violating this rule will be deleted. Users violating this
 rule may receive a temporary or permanent ban.
 
 4. **Our topic is Termux, its use cases, user experience and content
-share.**
+   share.**
 
 Our communities are solely about Termux, its use cases, usage experience
 and content produced by community members.
