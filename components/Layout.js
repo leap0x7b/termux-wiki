@@ -1,4 +1,4 @@
-import { Container, Navbar, Content } from 'react-bulma-components'
+import { Section, Container, Navbar, Content } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import logoSvg from '../pages/termux.svg'
@@ -43,24 +43,18 @@ const Layout = ({ children, frontMatter }) => {
         <meta property="og:title" content={frontMatter.title} />
         <meta
           property="og:description"
-          content={
-            children[0] !== undefined ? children[0].props.children : children.props.children
-          }
+          content={children[0] !== undefined ? children[0].props.children : children.props.children}
         />
         <meta property="og:url" content={'https://termux-wiki.vercel.app' + asPath} />
         <meta name="twitter:site" content="@termux" />
         <meta name="twitter:title" content={frontMatter.title} />
         <meta
           name="twitter:description"
-          content={
-            children[0] !== undefined ? children[0].props.children : children.props.children
-          }
+          content={children[0] !== undefined ? children[0].props.children : children.props.children}
         />
         <meta
           name="description"
-          content={
-            children[0] !== undefined ? children[0].props.children : children.props.children
-          }
+          content={children[0] !== undefined ? children[0].props.children : children.props.children}
         />
         <link rel="canonical" href={'https://termux-wiki.vercel.app' + asPath} />
         <link rel="icon" href={logo.src} />
@@ -69,7 +63,7 @@ const Layout = ({ children, frontMatter }) => {
         <link rel="mask-icon" href={logoSvg.src} color="#000000" />
         <title>{frontMatter.title} | Termux Wiki</title>
       </Head>
-      <Container className="has-navbar-fixed-top">
+      <Container>
         <Container>
           <Navbar className="is-fixed-top">
             <Navbar.Brand>
@@ -104,9 +98,8 @@ const Layout = ({ children, frontMatter }) => {
             </Navbar.Menu>
           </Navbar>
         </Container>
-        <div style={{ height: '3rem', display: 'block', width: '100%' }}>.</div>
-        <Container className="px-4 pt-4 pb-4">
-          <h1 className="title">
+        <Container className="px-4 pt-6 pb-4">
+          <h1 className="title pt-4">
             {frontMatter.title}
             <a href={pathname} className="header-anchor">
               <FontAwesomeIcon icon={faLink} />
