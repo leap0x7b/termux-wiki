@@ -10,7 +10,7 @@ You can install Termux from
 
 ## Google Play versions are deprecated
 
-*More info: [Termux on Google Play](google-play)*
+_More info: [Termux on Google Play](google-play)_
 
 Since 2 November 2020, we are unable to publish new versions on Google
 Play. Please use Termux from F-Droid.

@@ -12,18 +12,18 @@ that works directly with no rooting or setup required. A minimal base
 system is installed automatically, additional packages are available
 using the package manager.
 
-* [Getting started](getting-started)\
-  Collection of informational resources for newbies.  
-* [User Interface](user-interface)\
-  How to use the app.  
-* [Terminal Settings](terminal-settings)\
-  How to configure the app.  
-* [Software](software)\
-  How you can install more software.  
-* [Hardware](hardware)\
-  How to use an external keyboard and mouse.  
-* [FAQ](faq)\
-  Frequently asked questions and answers to them.  
+- [Getting started](getting-started)\
+  Collection of informational resources for newbies.
+- [User Interface](user-interface)\
+  How to use the app.
+- [Terminal Settings](terminal-settings)\
+  How to configure the app.
+- [Software](software)\
+  How you can install more software.
+- [Hardware](hardware)\
+  How to use an external keyboard and mouse.
+- [FAQ](faq)\
+  Frequently asked questions and answers to them.
 
 ## [Installation](installation)
 
@@ -34,10 +34,9 @@ not install it from Google Play.
 System requirements:
 
 - Android 7.0 - 11.0
-- CPU: AArch64, ARM, i686, x86\_64.
+- CPU: AArch64, ARM, i686, x86_64.
 - At least 200 MB of disk space.
 
-  
 Please note that Termux does not support ARM devices without NEON SIMD,
 for example on devices based on Nvidia Tegra 2 CPUs.
 
@@ -46,22 +45,22 @@ for example on devices based on Nvidia Tegra 2 CPUs.
 Termux has some extra features. You can add them by installing addons:
 
 - [Termux:API](termux-api)\
-  Access Android and Chrome hardware features.  
+  Access Android and Chrome hardware features.
 
 - [Termux:Boot](termux-boot)\
-  Run script(s) when your device boots.  
+  Run script(s) when your device boots.
 
 - [Termux:Float](termux-float)\
-  Run Termux in a floating window.  
+  Run Termux in a floating window.
 
 - [Termux:Styling](termux-styling)\
-  Have color schemes and powerline-ready fonts customize the appearance of the Termux terminal.  
+  Have color schemes and powerline-ready fonts customize the appearance of the Termux terminal.
 
 - [Termux:Tasker](termux-tasker)\
-  An easy way to call Termux executables from Tasker and compatible apps.  
+  An easy way to call Termux executables from Tasker and compatible apps.
 
 - [Termux:Widget](termux-widget)\
-  Start small scriptlets from the home screen.  
+  Start small scriptlets from the home screen.
 
 ## Community
 

@@ -5,8 +5,9 @@
   "repository": "https://github.com/leapofazzam123/termux-wiki",
   "scripts": {
     "build": "next build",
-    "dev": "next",
-    "start": "next start"
+    "dev": "next -p 9999",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

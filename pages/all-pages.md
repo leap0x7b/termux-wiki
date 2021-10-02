@@ -5,14 +5,14 @@ title: All pages
 import Link from 'next/link'
 
 export const importAll = (r) => {
-  return r.keys().map((fileName) => ({
-    link: fileName.substr(1) === '/index.md' ? '/' : fileName.substr(1).replace(/\.md$/, ""),
-    module: r(fileName)
-  }));
+return r.keys().map((fileName) => ({
+link: fileName.substr(1) === '/index.md' ? '/' : fileName.substr(1).replace(/\.md$/, ""),
+module: r(fileName)
+}));
 }
 
 export const posts = importAll(
-  require.context(__dirname + "/", true, /\.md$/)
+require.context(\_\_dirname + "/", true, /\.md$/)
 );
 
 <ul>

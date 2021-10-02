@@ -35,8 +35,8 @@ some warnings about socket files, ignore them.
 **Warning**: never store your backups in Termux private directories.
 Their paths may look like:
 
-|                                            |                                                                                    |
-|--------------------------------------------|--------------------------------------------------------------------------------------------|
+|                                            |                                                                                            |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | /data/data/com.termux                      | private Termux directory on internal storage                                               |
 | /sdcard/Android/data/com.termux            | private Termux directory on shared storage                                                 |
 | /storage/XXXX-XXXX/Android/data/com.termux | private Termux directory on external storage, XXXX-XXXX is the UUID of your micro-sd card. |
@@ -58,10 +58,10 @@ $ termux-setup-storage
 ```
 
 2. Extract home and usr with overwriting everything. Pass
-`--recursive-unlink` to remove any junk and orphaned files. Pass
-`--preserve-permissions` to set file permissions as in archive, ignoring
-the umask value. By combining these extra options you will get
-installation state exactly as was in archive.
+   `--recursive-unlink` to remove any junk and orphaned files. Pass
+   `--preserve-permissions` to set file permissions as in archive, ignoring
+   the umask value. By combining these extra options you will get
+   installation state exactly as was in archive.
 
 ```shell
 $ tar -zxf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
