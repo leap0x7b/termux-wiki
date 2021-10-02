@@ -1,38 +1,43 @@
-import React from 'react'
-import { MDXProvider } from '@mdx-js/react'
-import 'bulma/bulma.sass'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-import '../components/styles.css'
-import Link from 'next/link'
-import { Image } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-import Layout from '../components/Layout.js'
 import Highlight, { defaultProps } from 'prism-react-renderer'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 import theme from 'prism-react-renderer/themes/github'
+import { Image } from 'react-bulma-components'
+import Layout from '../components/Layout.js'
+import { MDXProvider } from '@mdx-js/react'
+import Link from 'next/link'
+import React from 'react'
+
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import 'bulma/bulma.sass'
+import '../components/styles.css'
 
 const Code = ({ children, className }) => {
   const language = className.replace(/language-/, '')
 
   return (
-    <Highlight
-      {...defaultProps}
-      code={children.trim()}
-      language={language !== undefined ? language : 'none'}
-      theme={theme}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={({ className }, 'highlight')} style={{ ...style, padding: '20px' }}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
+    <>
+      <Highlight
+        {...defaultProps}
+        code={children.trim()}
+        language={language !== undefined ? language : 'none'}
+        theme={theme}
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre className={({ className }, 'highlight')} style={{ ...style, padding: '20px' }}>
+            {tokens.map((line, i) => {
+              return (
+                <div key={i} {...getLineProps({ line, key: i })}>
+                  {line.map((token, key) => {
+                    return <span key={key} {...getTokenProps({ token, key })} />
+                  })}
+                </div>
+              )
+            })}
+          </pre>
+        )}
+      </Highlight>
+    </>
   )
 }
 
@@ -41,12 +46,14 @@ const heading = (Tag) =>
     if (!props.id) return <Tag {...props} />
 
     return (
-      <Tag {...props}>
-        {props.children}{' '}
-        <a href={`#${props.id}`} className="header-anchor">
-          <FontAwesomeIcon icon={faLink} />
-        </a>
-      </Tag>
+      <>
+        <Tag {...props}>
+          {props.children}{' '}
+          <a href={`#${props.id}`} className="header-anchor">
+            <FontAwesomeIcon icon={faLink} />
+          </a>
+        </Tag>
+      </>
     )
   }
 
@@ -80,7 +87,7 @@ const mdComponents = {
   }
 }
 
-function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <MDXProvider components={mdComponents}>
       <Component {...pageProps} />
