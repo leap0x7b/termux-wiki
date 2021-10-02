@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Check status
         run: |
-          if [[ "${{ github.event.deployment_status.state }}" == "pending" ]]; then
+          if [[ "${{ github.event.deployment_status.state }}" == "success" ]]; then
             echo ":) Deploy succeeded!"
             exit 0
           else
