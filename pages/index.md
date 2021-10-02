@@ -6,7 +6,7 @@ Tips and tricks about using Termux application and its packages.
 
 ## Introduction
 
-![Weechat IRC in Termux](weechat.png "Weechat IRC in Termux")
+![tmux running on Termux with Vim, pfetch, and tig](tmux.png)
 Termux is an Android terminal emulator and Linux environment application
 that works directly with no rooting or setup required. A minimal base
 system is installed automatically, additional packages are available
