@@ -1,0 +1,16 @@
+name: Vercel deploy
+on: deployment_status
+jobs:
+  check:
+    if: github.event.deployment_status.state != 'pending'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check status
+        run: |
+          if [[ "${{ github.event.deployment_status.state }}" == "pending" ]]; then
+            echo ":) Deploy succeeded!"
+            exit 0
+          else
+            echo "): Deploy failed!"
+            exit 1
+          fi
