@@ -13,16 +13,11 @@ import 'bulma/bulma.sass'
 import '../components/styles.css'
 
 const Code = ({ children, className }) => {
-  const language = className.replace(/language-/, '')
+  const language = className !== undefined ? className.replace(/language-/, '') : 'none'
 
   return (
     <>
-      <Highlight
-        {...defaultProps}
-        code={children.trim()}
-        language={language !== undefined ? language : 'none'}
-        theme={theme}
-      >
+      <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={({ className }, 'highlight')} style={{ ...style, padding: '20px' }}>
             {tokens.map((line, i) => {

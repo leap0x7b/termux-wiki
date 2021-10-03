@@ -21,7 +21,7 @@ export const posts = importAll(
     return false
   }
   return true
-}).map((post) => (
+}).sort((a, b) => a.module.frontMatter.title.localeCompare(b.module.frontMatter.title)).map((post) => (
   <li><Link href={post.link}>{post.module.frontMatter.title}</Link></li>
 ))}
 </ul>
