@@ -12,6 +12,18 @@ h6:hover .header-anchor {
   display: inline-block;
 }
 
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.separator::before {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid hsl(0, 0%, 96%);
+}
+
 /* Fix Prism syntax highlighting on Bulma */
 .content .tag,
 .content .number,

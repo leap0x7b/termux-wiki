@@ -1,6 +1,6 @@
 import { Section, Container, Navbar, Content } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { faLink, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import logoSvg from '../pages/termux.svg'
 import { useRouter } from 'next/router'
 import logo from '../pages/termux.png'
@@ -99,14 +99,24 @@ const Layout = ({ children, frontMatter }) => {
           </Navbar>
         </Container>
         <Container className="px-4 pt-6 pb-4">
+          <div style={{ height: '0.25em' }} />
           <h1 className="title pt-4">
             {frontMatter.title}
-            <a href={pathname} className="header-anchor">
+            <a href={pathname} className="header-anchor" style={{ marginLeft: '0.5em' }}>
               <FontAwesomeIcon icon={faLink} />
             </a>
           </h1>
         </Container>
-        <hr style={{ margin: '0px' }} />
+        <div className="separator">
+          <a href={'https://github.com/leapofazzam123/termux-wiki/edit/main/pages' + (pathname === '/' ? '/index' : pathname) + '.mdx'} className="icon-text has-text-link pl-1 pr-2">
+            <span className="icon">
+              <FontAwesomeIcon icon={faPencilAlt} />
+            </span>
+            <span>Edit this page</span>
+          </a>
+          <hr style={{ float: 'right', width: '1rem', margin: 0 }} />
+        </div>
+        <div style={{ height: '0.125em' }} />
         <Content className="px-4 pt-4 pb-5">{children}</Content>
       </Container>
     </>
