@@ -44,7 +44,7 @@ const heading = (Tag) =>
       <>
         <Tag {...props}>
           {props.children}{' '}
-          <a href={`#${props.id}`} className="header-anchor">
+          <a href={`#${props.id}`} className='header-anchor'>
             <FontAwesomeIcon icon={faLink} />
           </a>
         </Tag>
@@ -60,18 +60,18 @@ const mdComponents = {
   h5: heading('h5'),
   h6: heading('h6'),
   wrapper: Layout,
-  pre: (props) => <div className="block" {...props} />,
+  pre: (props) => <div className='block' {...props} />,
   code: Code,
   a: (props) => <Link {...props} passHref />,
   table: (props) => (
-    <div className="table-container">
-      <table className="table is-striped" {...props} />
+    <div className='table-container'>
+      <table className='table is-striped' {...props} />
     </div>
   ),
   img: (props) => {
     if (props.title !== undefined) {
       return (
-        <figure className="image">
+        <figure className='image'>
           <img src={props.src} alt={props.alt} />
           <figcaption>{props.title}</figcaption>
         </figure>

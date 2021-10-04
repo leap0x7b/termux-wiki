@@ -6,22 +6,25 @@ import Link from 'next/link'
 
 export const importAll = (r) => {
   return r.keys().map((fileName) => ({
-    link: fileName.substr(1) === '/index.mdx' ? '/' : fileName.substr(1).replace(/\.mdx$/, ""),
+    link: fileName.substr(1) === '/index.mdx' ? '/' : fileName.substr(1).replace(/\.mdx$/, ''),
     module: r(fileName)
-  }));
+  }))
 }
 
-export const posts = importAll(
-  require.context(__dirname + "/", true, /\.mdx$/)
-);
+export const posts = importAll(require.context(__dirname + '/', true, /\.mdx$/))
 
 <ul>
-{posts.filter((post) => {
-  if (post.link == '/404' || post.link == '/all-pages') {
-    return false
-  }
-  return true
-}).sort((a, b) => a.module.frontMatter.title.localeCompare(b.module.frontMatter.title)).map((post) => (
-  <li><Link href={post.link}>{post.module.frontMatter.title}</Link></li>
-))}
+  {posts
+    .filter((post) => {
+      if (post.link == '/404' || post.link == '/all-pages') {
+        return false
+      }
+      return true
+    })
+    .sort((a, b) => a.module.frontMatter.title.localeCompare(b.module.frontMatter.title))
+    .map((post) => (
+      <li>
+        <Link href={post.link}>{post.module.frontMatter.title}</Link>
+      </li>
+    ))}
 </ul>

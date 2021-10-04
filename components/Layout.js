@@ -39,45 +39,44 @@ const Layout = ({ children, frontMatter }) => {
   return (
     <>
       <Head>
-        <meta property="og:site_name" content="Termux Wiki" />
-        <meta property="og:title" content={frontMatter.title} />
+        <meta property='og:site_name' content='Termux Wiki' />
+        <meta property='og:title' content={frontMatter.title} />
         <meta
-          property="og:description"
+          property='og:description'
           content={children[0] !== undefined ? children[0].props.children : children.props.children}
         />
-        <meta property="og:url" content={'https://termux-wiki.vercel.app' + asPath} />
-        <meta name="twitter:site" content="@termux" />
-        <meta name="twitter:title" content={frontMatter.title} />
+        <meta property='og:url' content={'https://termux-wiki.vercel.app' + asPath} />
+        <meta name='twitter:site' content='@termux' />
+        <meta name='twitter:title' content={frontMatter.title} />
         <meta
-          name="twitter:description"
+          name='twitter:description'
           content={children[0] !== undefined ? children[0].props.children : children.props.children}
         />
         <meta
-          name="description"
+          name='description'
           content={children[0] !== undefined ? children[0].props.children : children.props.children}
         />
-        <link rel="canonical" href={'https://termux-wiki.vercel.app' + asPath} />
-        <link rel="icon" href={logo.src} />
-        <link rel="favicon" href={logo.src} />
-        <link rel="shortcut icon" href={logo.src} />
-        <link rel="mask-icon" href={logoSvg.src} color="#000000" />
+        <link rel='canonical' href={'https://termux-wiki.vercel.app' + asPath} />
+        <link rel='icon' href={logo.src} />
+        <link rel='favicon' href={logo.src} />
+        <link rel='shortcut icon' href={logo.src} />
+        <link rel='mask-icon' href={logoSvg.src} color='#000000' />
         <title>{frontMatter.title} | Termux Wiki</title>
       </Head>
       <Container>
         <Container>
-          <Navbar className="is-fixed-top">
+          <Navbar className='is-fixed-top'>
             <Navbar.Brand>
-              <Link href="/" passHref>
+              <Link href='/' passHref>
                 <NavbarItem>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="34 38 40 32"
-                    width="32px"
-                    height="16px"
-                  >
-                    <path d="M34 38h6l12 16-12 16h-6l12-16M56 66h18v4H56" fill="currentColor" />
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='34 38 40 32'
+                    width='32px'
+                    height='16px'>
+                    <path d='M34 38h6l12 16-12 16h-6l12-16M56 66h18v4H56' fill='currentColor' />
                   </svg>
-                  <span className="pl-1">Termux Wiki</span>
+                  <span className='pl-1'>Termux Wiki</span>
                 </NavbarItem>
               </Link>
               <Navbar.Burger
@@ -98,18 +97,24 @@ const Layout = ({ children, frontMatter }) => {
             </Navbar.Menu>
           </Navbar>
         </Container>
-        <Container className="px-4 pt-6 pb-4">
+        <Container className='px-4 pt-6 pb-4'>
           <div style={{ height: '0.25em' }} />
-          <h1 className="title pt-4">
+          <h1 className='title pt-4'>
             {frontMatter.title}
-            <a href={pathname} className="header-anchor" style={{ marginLeft: '0.5em' }}>
+            <a href={pathname} className='header-anchor' style={{ marginLeft: '0.5em' }}>
               <FontAwesomeIcon icon={faLink} />
             </a>
           </h1>
         </Container>
-        <div className="separator">
-          <a href={'https://github.com/leapofazzam123/termux-wiki/edit/main/pages' + (pathname === '/' ? '/index' : pathname) + '.mdx'} className="icon-text has-text-link pl-1 pr-2">
-            <span className="icon">
+        <div className='separator'>
+          <a
+            href={
+              'https://github.com/leapofazzam123/termux-wiki/edit/main/pages' +
+              (pathname === '/' ? '/index' : pathname) +
+              '.mdx'
+            }
+            className='icon-text has-text-link pl-1 pr-2'>
+            <span className='icon'>
               <FontAwesomeIcon icon={faPencilAlt} />
             </span>
             <span>Edit this page</span>
@@ -117,7 +122,7 @@ const Layout = ({ children, frontMatter }) => {
           <hr style={{ float: 'right', width: '1rem', margin: 0 }} />
         </div>
         <div style={{ height: '0.125em' }} />
-        <Content className="px-4 pt-4 pb-5">{children}</Content>
+        <Content className='px-4 pt-4 pb-5'>{children}</Content>
       </Container>
     </>
   )

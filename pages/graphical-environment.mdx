@@ -88,8 +88,8 @@ Log file is /data/data/com.termux/files/home/.vnc/localhost:1.log
 It means that X (vnc) server is available on display 'localhost:1'.
 
 4. Finally, to make programs do graphical output to the display
-'localhost:1', set environment variable like shown here (yes, without
-specifying 'localhost'):
+   'localhost:1', set environment variable like shown here (yes, without
+   specifying 'localhost'):
 
 ```shell
 $ export DISPLAY=":1"
@@ -105,11 +105,11 @@ Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
 (developed by RealVNC Limited).
 
 1. Determine port number on which VNC server listens. It can be
-calculated like this: `5900 + {display number}`. So for display
-'localhost:1' the port will be 5901.
+   calculated like this: `5900 + {display number}`. So for display
+   'localhost:1' the port will be 5901.
 
 2. Now open the VNC Viewer application and create a new connection with
-the following information (assuming that VNC port is 5901):
+   the following information (assuming that VNC port is 5901):
 
 ![VNC Viewer: new connection](realvnc-vncviewer.jpg)
 
@@ -118,9 +118,9 @@ phone does, make sure you correctly start a VNC session and know the IP
 address of the device.
 
 3. Now launch it. You will be prompted for password that you entered on
-first launch of 'vncserver'. Depending on packages you installed, you
-may see either entirely black screen or terminal prompt (only if 'aterm'
-is installed).
+   first launch of 'vncserver'. Depending on packages you installed, you
+   may see either entirely black screen or terminal prompt (only if 'aterm'
+   is installed).
 
 ## Setting up XServer
 
