@@ -44,9 +44,11 @@ const heading = (Tag) =>
       <>
         <Tag {...props}>
           {props.children}{' '}
-          <a href={`#${props.id}`} className='header-anchor'>
-            <FontAwesomeIcon icon={faLink} />
-          </a>
+          <Link href={`#${props.id}`}>
+            <a className='header-anchor'>
+              <FontAwesomeIcon icon={faLink} />
+            </a>
+          </Link>
         </Tag>
       </>
     )

@@ -101,24 +101,27 @@ const Layout = ({ children, frontMatter }) => {
           <div style={{ height: '0.25em' }} />
           <h1 className='title pt-4'>
             {frontMatter.title}
-            <a href={pathname} className='header-anchor' style={{ marginLeft: '0.5em' }}>
-              <FontAwesomeIcon icon={faLink} />
-            </a>
+            <Link href={pathname}>
+              <a className='header-anchor' style={{ marginLeft: '0.5em' }}>
+                <FontAwesomeIcon icon={faLink} />
+              </a>
+            </Link>
           </h1>
         </Container>
         <div className='separator'>
-          <a
+          <Link
             href={
               'https://github.com/leapofazzam123/termux-wiki/edit/main/pages' +
               (pathname === '/' ? '/index' : pathname) +
               '.mdx'
-            }
-            className='icon-text has-text-link pl-1 pr-2'>
-            <span className='icon'>
-              <FontAwesomeIcon icon={faPencilAlt} />
-            </span>
-            <span>Edit this page</span>
-          </a>
+            }>
+            <a className='icon-text has-text-link pl-1 pr-2'>
+              <span className='icon'>
+                <FontAwesomeIcon icon={faPencilAlt} />
+              </span>
+              <span>Edit this page</span>
+            </a>
+          </Link>
           <hr style={{ float: 'right', width: '1rem', margin: 0 }} />
         </div>
         <div style={{ height: '0.125em' }} />
