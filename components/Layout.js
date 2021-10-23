@@ -130,9 +130,7 @@ const Layout = ({ children, frontMatter }) => {
       <Footer style={{ padding: 0 }}>
         <Container className='px-4 py-4'>
           This site is open source. You can contribute to it on&nbsp;
-          <Link href='https://github.com/leapofazzam123/termux-wiki'>
-            GitHub
-          </Link>.
+          <Link href='https://github.com/leapofazzam123/termux-wiki'>GitHub</Link>.
         </Container>
       </Footer>
     </>
