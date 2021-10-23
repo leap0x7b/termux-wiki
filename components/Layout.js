@@ -1,4 +1,4 @@
-import { Section, Container, Navbar, Content } from 'react-bulma-components'
+import { Section, Container, Navbar, Content, Footer } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import logoSvg from '../pages/termux.svg'
@@ -125,8 +125,16 @@ const Layout = ({ children, frontMatter }) => {
           <hr style={{ float: 'right', width: '1rem', margin: 0 }} />
         </div>
         <div style={{ height: '0.125em' }} />
-        <Content className='px-4 pt-4 pb-5'>{children}</Content>
+        <Content className='px-4 py-4'>{children}</Content>
       </Container>
+      <Footer style={{ padding: 0 }}>
+        <Container className='px-4 py-4'>
+          This site is open source. You can contribute to it on&nbsp;
+          <Link href='https://github.com/leapofazzam123/termux-wiki'>
+            GitHub
+          </Link>.
+        </Container>
+      </Footer>
     </>
   )
 }
