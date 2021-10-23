@@ -128,7 +128,7 @@ const Layout = ({ children, frontMatter }) => {
         <Content className='px-4 py-4'>{children}</Content>
       </Container>
       <Footer style={{ padding: 0 }}>
-        <Container className='px-4 py-4'>
+        <Container className='has-text-centered px-5 py-5'>
           This site is open source. You can contribute to it on&nbsp;
           <Link href='https://github.com/leapofazzam123/termux-wiki'>GitHub</Link>.
         </Container>
