@@ -27,7 +27,7 @@
     "remark-attr": "^0.11.1",
     "remark-emoji": "^2.2.0",
     "remark-github": "^10.1.0",
-    "remark-images": "^2.0.0",
+    "remark-images": "^3.0.0",
     "remark-slug": "6",
     "sass": "^1.42.1"
   },
