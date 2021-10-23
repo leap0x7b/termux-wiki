@@ -28,7 +28,7 @@
     "remark-emoji": "^2.2.0",
     "remark-github": "^10.1.0",
     "remark-images": "^2.0.0",
-    "remark-slug": "6",
+    "remark-slug": "7",
     "sass": "^1.42.1"
   },
   "devDependencies": {
