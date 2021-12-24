@@ -72,7 +72,12 @@ const mdComponents = {
   ),
   img: (props) => (
     <figure className='image'>
-      <Image src={require(`../public/${props.src}`)} alt={props.alt} loading='lazy' placeholder='blur' />
+      <Image
+        src={require(`../public/${props.src}`)}
+        alt={props.alt}
+        loading='lazy'
+        placeholder='blur'
+      />
       {props.title && <figcaption>{props.title}</figcaption>}
     </figure>
   )
