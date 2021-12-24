@@ -6,12 +6,7 @@ const withMDX = require('@next/mdx')({
     remarkPlugins: [
       require('remark-images'),
       require('remark-emoji'),
-      [
-        require('remark-github'),
-        {
-          repository: 'https://github.com/termux/termux-app'
-        }
-      ],
+      [require('remark-github'), { repository: 'https://github.com/termux/termux-app' }],
       require('remark-slug'),
       require('remark-attr'),
       require('./lib/frontmatter.js')
@@ -22,5 +17,8 @@ const withMDX = require('@next/mdx')({
 
 module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  experimental: { esmExternals: true }
+  swcMinify: true,
+  images: {
+    formats: ['image/avif', 'image/webp']
+  }
 })

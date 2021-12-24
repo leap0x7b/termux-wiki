@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import theme from 'prism-react-renderer/themes/github'
-import { Image } from 'react-bulma-components'
+import Image from 'next/image'
 import Layout from '../components/Layout.js'
 import { MDXProvider } from '@mdx-js/react'
 import Link from 'next/link'
@@ -70,18 +70,12 @@ const mdComponents = {
       <table className='table is-striped' {...props} />
     </div>
   ),
-  img: (props) => {
-    if (props.title !== undefined) {
-      return (
-        <figure className='image'>
-          <img src={props.src} alt={props.alt} />
-          <figcaption>{props.title}</figcaption>
-        </figure>
-      )
-    } else {
-      return <Image src={props.src} alt={props.alt} />
-    }
-  }
+  img: (props) => (
+    <figure className='image'>
+      <Image src={require(`../public/${props.src}`)} alt={props.alt} loading='lazy' placeholder='blur' />
+      {props.title && <figcaption>{props.title}</figcaption>}
+    </figure>
+  )
 }
 
 const App = ({ Component, pageProps }) => {
